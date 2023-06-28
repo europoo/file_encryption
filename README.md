@@ -7,7 +7,22 @@ A tool to encrypt and decrypt files
 This is a work-in-progress program based on the youtube video on creating a file encryption malware by Glotravi. It's purpose is to help me develop my C++ skills and cyber security knowledge. 
 
 
-UNDER NO CIRCUMSTANCES ARE YOU TO RUN THIS TOOL ON ANY SYSTEM YOU DO NOT OWN OR DO NOT HAVE PERMISSION TO RUN SUCH PROGRAMS ON. THIS IS STRICTLY FOR EDUCAIONAL PURPOSES. YOU HAVE BEEN WARNED.
+UNDER NO CIRCUMSTANCES ARE YOU TO RUN THIS TOOL ON ANY SYSTEM YOU DO NOT OWN OR DO NOT HAVE PERMISSION TO RUN SUCH PROGRAMS ON. THIS IS STRICTLY FOR EDUCAIONAL PURPOSES. 
+
+IF YOU DO RUN IT ON A MACHINE YOU OWN, PLEASE BE CAREFULL ON WHAT FILES YOU RUN IT ON. I WILL NOT BE RESPONSIBLE FOR YOU BRICKING YOUR SYSTEM.
+
+YOU HAVE BEEN WARNED.
+
+### Executing program
+
+* Execute the file in the program directory
+* There are two options, '-encrypt' and '-decrypt'
+* Both options require a path to a directory to work on
+
+```
+.\file_encryption.exe -encrypt <path/to/directory>
+.\file_encryption.exe -decrypt <path/to/directory>
+```
 
 ## Acknowledgments
 * [Glotravi](https://www.youtube.com/watch?v=DOlcAVlUbdk)
