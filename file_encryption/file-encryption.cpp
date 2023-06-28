@@ -2,8 +2,14 @@
 #include <fstream>
 #include <dirent.h>
 #include <sys/stat.h>
+#include <algorithm>
 
-// This function will encry[t the file
+#include "includes/hello-world.cpp"
+
+// defining a namespace means you don't have to have std:: as a prefix
+// using namespace std;
+
+// This function will encrypt the file
 void encryptFile(std::string filePath) {
 	// 'file' is the file that will be encrypted
 	// 'tempFile' is a tempory file which will save encrypted data of file
@@ -138,12 +144,24 @@ void decryptDirectory(std::string directoryPath) {
 	}
 }
 
-int main() {
-	// Encrypt directory
-	// decryptDirectory("E:\\C++\\file_encryption\\TEST_FOLDER");
+int main(int argc, char *argv[]) {
+	for (int i = 0; i < argc; ++i) {
 
-	// TO DO specify flag to run function and directory path
+		if (std::string(argv[i]) == "-encrypt") {
+			std::cout << "Your files are being encrypted!";
 
+			std::string value = std::string(argv[i + 1]);
+			encryptDirectory(value);
+
+		}
+		else if (std::string(argv[i]) == "-decrypt") {
+			std::cout << "Your files are being decrypted!";
+
+			std::string value = std::string(argv[i + 1]);
+			decryptDirectory(value);
+
+		}
+	}
 	return 0;
 }
 
